@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta content="width=device-width,initial-scale=1.0" name="viewport"></meta>
+    <link href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css" rel="stylesheet">
+    <link href="../../static/css/me.css" rel="stylesheet">
+</head>
+<body>
+<br><br><br>
+<div>
+    <div class="m-container-small m-padded-tb-massive" style="max-width: 30em !important;">
+    <div class="ui container">
+        <div class="ui center aligned grid">
+            <div class="column">
+                <h2 class="ui teal header">个人信息注册</h2>
+                <form action="#" class="ui form" method="post" th:action="@{/admin/register}">
+                    <div class="ui segment">
+
+                        <div class="field">
+                            <div class="ui  input">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <h5 class="ui teal header" style="padding-top: 1em !important;">昵称</h5>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="text" name="nickname" placeholder="昵称">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="ui input">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <h5 class="ui teal header"  style="padding-top: 1em !important;">邮箱</h5>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="email" name="email" placeholder="邮箱">
+                            </div>
+                        </div>
+
+
+                        <div class="field">
+                            <div class="ui  input">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <h5 class="ui teal header" style="padding-top: 1em !important;">用户名</h5>
+                                &nbsp;&nbsp;&nbsp;
+                                <input type="text" name="username" placeholder="用户名">
+                           </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui input">
+                                <h5 class="ui teal header"  style="padding-top: 1em !important;">输入新密码</h5>
+                                &nbsp;&nbsp;&nbsp;
+                                <input type="password" name="password" placeholder="输入新密码">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui input">
+                                <h5 class="ui teal header"  style="padding-top: 1em !important;">确认新密码</h5>
+                                &nbsp;&nbsp;&nbsp;
+                                <input type="password" name="" placeholder="确认新密码">
+                            </div>
+                        </div>
+
+
+                        <div class="field">
+                            <div class="ui image input">
+                                <h5 class="ui teal header"  style="padding-top: 1em !important;">上传新头像</h5>
+                                &nbsp;&nbsp;&nbsp;
+                                <input type="file" name="avatar" id="file0" style="width:104px;height:50px;"/>
+                                <br>
+                                <img class="ui avatar image" src="" id="img0" style="width:50px;height:50px;">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="field">
+                        <div class="ui two column  grid">
+                            <div class="column">
+                                <button class="ui fluid  teal submit button" onclick="window.history.go(-1)" >返回</button>
+                            </div>
+                            <div class="right aligned column">
+                                <button class="ui fluid  teal submit button">注册</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui error mini message"></div>
+                    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">用户名已存在</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--/*/</th:block>/*/-->
+
+<script>
+    $("#file0").change(function(){
+        var objUrl = getObjectURL(this.files[0]);
+        if(objUrl){
+            $('#img0').attr("src",objUrl);
+        }
+    });
+    function getObjectURL(file) {
+        var url = null;
+        if(window.createObjectURL!=undefined){
+            url = window.createObjectURL(file);
+        }else if(window.URL!=undefined){
+            url = window.URL.createObjectURL(file);
+        }else if(window.webkitURL!=undefined){
+            url = window.webkitURL.createObjectURL(file);
+        }
+        return url;
+    }
+
+
+    $('.ui.form').form({
+        fields : {
+            nickname : {
+                identifier: 'nickname',
+                rules: [{
+                    type : 'empty',
+                    prompt: '请输入昵称'
+                }]
+            },
+            type: {
+                identifier: 'email',
+                rules: [{
+                    type: 'email',
+                    prompt: '请填写正确的邮箱地址'
+                }]
+            },
+            username : {
+                identifier: 'username',
+                rules: [{
+                    type : 'empty',
+                    prompt: '请输入用户名'
+                }]
+            },
+            password : {
+                identifier: 'password',
+                rules: [{
+                    type : 'empty',
+                    prompt: '请输入密码'
+                }]
+            },
+            avatar : {
+                identifier: 'avatar',
+                rules: [{
+                    type : 'empty',
+                    prompt: '请上传头像'
+                }]
+            }
+        }
+    });
+</script>
+</body>
+</html>
