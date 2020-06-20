@@ -3,21 +3,15 @@ package com.gz.web.admin;
 import com.gz.po.User;
 import com.gz.service.UserService;
 import com.gz.util.FileUtils;
-import com.gz.util.TestController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 import javax.servlet.http.HttpSession;
-
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * @authod wu
