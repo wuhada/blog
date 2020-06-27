@@ -87,11 +87,11 @@ public class BlogController {
             , @RequestParam("content") String content
             , @RequestParam("firstPicture") MultipartFile file
             , @RequestParam("flag") String flag
-            , @RequestParam("appreciation") boolean appreciation
-            , @RequestParam("shareStatement") boolean shareStatement
-            , @RequestParam("commentabled") boolean commentabled
+            , @RequestParam(value = "appreciation",required = false,defaultValue = "0") boolean appreciation
+            , @RequestParam(value = "shareStatement",required = false,defaultValue = "0") boolean shareStatement
+            , @RequestParam(value = "commentabled",required = false,defaultValue = "0") boolean commentabled
             , @RequestParam("published") boolean published
-            , @RequestParam("recommend") boolean recommend
+            , @RequestParam(value = "recommend",required = false,defaultValue = "0") boolean recommend
             , @RequestParam("type.id") Long typeId
             , @RequestParam("tagIds") String tagIds
             , @RequestParam("description") String description
