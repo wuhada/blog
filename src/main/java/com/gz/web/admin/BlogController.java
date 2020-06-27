@@ -86,7 +86,7 @@ public class BlogController {
             , @RequestParam("title") String title
             , @RequestParam("content") String content
             , @RequestParam("firstPicture") MultipartFile file
-            , @RequestParam("flag") String flag
+            , @RequestParam(value = "flag",required = false,defaultValue = "原创") String flag
             , @RequestParam(value = "appreciation",required = false,defaultValue = "0") boolean appreciation
             , @RequestParam(value = "shareStatement",required = false,defaultValue = "0") boolean shareStatement
             , @RequestParam(value = "commentabled",required = false,defaultValue = "0") boolean commentabled
