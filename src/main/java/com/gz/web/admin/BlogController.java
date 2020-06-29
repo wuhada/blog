@@ -82,7 +82,7 @@ public class BlogController {
 
 
     @PostMapping("/blogs")
-    public String post(@RequestParam("id") Long id
+    public String post(/*@RequestParam("id") Long id
             , @RequestParam("title") String title
             , @RequestParam("content") String content
             , @RequestParam("firstPicture") MultipartFile file
@@ -94,10 +94,11 @@ public class BlogController {
             , @RequestParam(value = "recommend",required = false,defaultValue = "0") boolean recommend
             , @RequestParam("type.id") Long typeId
             , @RequestParam("tagIds") String tagIds
-            , @RequestParam("description") String description
+            , @RequestParam("description") String description*/
+            Blog blog
             , RedirectAttributes attributes, HttpSession session) {
 
-        FileUtils.upload(file, "E:/image", file.getOriginalFilename());
+        /*FileUtils.upload(file, "E:/image", file.getOriginalFilename());
 
         Type type = new Type();
         type.setId(typeId);
@@ -115,7 +116,7 @@ public class BlogController {
         blog.setType(type);
         blog.setTagIds(tagIds);
         blog.setDescription(description);
-        blog.setFirstPicture(file.getOriginalFilename());
+        blog.setFirstPicture(file.getOriginalFilename());*/
 
 
         blog.setUser((User) session.getAttribute("user"));

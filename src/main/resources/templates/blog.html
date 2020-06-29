@@ -55,7 +55,8 @@
       </div>
       <div class="ui attached segment">
         <!--图片区域-->
-        <img src="https://unsplash.it/800/450?image=1005" style="height: 450px;width: 800px" th:src="@{/get/{id}(id=${blog.id})}"  alt="" class="ui fluid rounded image">
+        <!--<img src="https://unsplash.it/800/450?image=1005" style="height: 450px;width: 800px" th:src="@{/get/{id}(id=${blog.id})}"  alt="" class="ui fluid rounded image">-->
+        <img src="https://unsplash.it/800/450?image=1005" th:src="@{${blog.firstPicture}}" alt="" class="ui fluid rounded image">
       </div>
       <div class="ui  attached padded segment">
         <!--内容-->

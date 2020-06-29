@@ -1,0 +1,505 @@
+2020-06-25 21:14:54.909  INFO 588 --- [restartedMain] com.gz.BlogApplication                   : Starting BlogApplication on LAPTOP-E31KUBM4 with PID 588 (E:\spring boot\study\blog\target\classes started by wu in E:\spring boot\study\blog)
+2020-06-25 21:14:54.919 DEBUG 588 --- [restartedMain] com.gz.BlogApplication                   : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2020-06-25 21:14:54.920  INFO 588 --- [restartedMain] com.gz.BlogApplication                   : The following profiles are active: dev
+2020-06-25 21:14:55.166  INFO 588 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-25 21:14:55.167  INFO 588 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-25 21:14:56.674  INFO 588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-25 21:14:56.786  INFO 588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102ms. Found 5 JPA repository interfaces.
+2020-06-25 21:14:58.049  INFO 588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-25 21:14:58.061  INFO 588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-25 21:14:58.062  INFO 588 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-25 21:14:58.066  INFO 588 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-06-25 21:14:58.067  INFO 588 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+2020-06-25 21:14:58.067  INFO 588 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-06-25 21:14:58.068  INFO 588 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-06-25 21:14:58.123  INFO 588 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+2020-06-25 21:14:58.303  INFO 588 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-25 21:14:58.303  INFO 588 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3135 ms
+2020-06-25 21:14:58.606  INFO 588 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-25 21:14:58.741  INFO 588 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-25 21:14:59.162  INFO 588 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-25 21:14:59.328  INFO 588 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-25 21:14:59.330  WARN 588 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-06-25 21:15:10.582 ERROR 588 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:906)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:831)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1214)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1245)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.gz.BlogApplication.main(BlogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:850)
+	... 55 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 57 common frames omitted
+
+2020-06-25 21:15:10.583  WARN 588 --- [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata : Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+2020-06-25 21:15:10.586  WARN 588 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2020-06-25 21:15:10.591  INFO 588 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-06-25 21:15:10.603  INFO 588 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-25 21:15:10.615 ERROR 588 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.gz.BlogApplication.main(BlogApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1214)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1245)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
+	... 21 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 38 common frames omitted
+
+2020-06-25 21:15:42.156  INFO 13916 --- [restartedMain] com.gz.BlogApplication                   : Starting BlogApplication on LAPTOP-E31KUBM4 with PID 13916 (E:\spring boot\study\blog\target\classes started by wu in E:\spring boot\study\blog)
+2020-06-25 21:15:42.160 DEBUG 13916 --- [restartedMain] com.gz.BlogApplication                   : Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2020-06-25 21:15:42.161  INFO 13916 --- [restartedMain] com.gz.BlogApplication                   : The following profiles are active: dev
+2020-06-25 21:15:42.216  INFO 13916 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-25 21:15:42.216  INFO 13916 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-25 21:15:42.961  INFO 13916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-25 21:15:43.052  INFO 13916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82ms. Found 5 JPA repository interfaces.
+2020-06-25 21:15:43.827  INFO 13916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-25 21:15:43.837  INFO 13916 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-25 21:15:43.837  INFO 13916 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-25 21:15:43.839  INFO 13916 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2020-06-25 21:15:43.840  INFO 13916 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+2020-06-25 21:15:43.840  INFO 13916 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-06-25 21:15:43.841  INFO 13916 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-06-25 21:15:43.844  INFO 13916 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+2020-06-25 21:15:43.997  INFO 13916 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-25 21:15:43.998  INFO 13916 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1781 ms
+2020-06-25 21:15:44.193  INFO 13916 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-25 21:15:44.236  INFO 13916 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-25 21:15:44.357  INFO 13916 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-25 21:15:44.453  INFO 13916 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-25 21:15:44.454  WARN 13916 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-06-25 21:15:44.709  INFO 13916 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-25 21:15:44.831  INFO 13916 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-06-25 21:15:46.727  INFO 13916 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-25 21:15:46.734  INFO 13916 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-25 21:15:46.783  INFO 13916 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-25 21:15:47.740  WARN 13916 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-25 21:15:48.016  INFO 13916 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-25 21:15:48.348  INFO 13916 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-06-25 21:15:49.485  INFO 13916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-25 21:15:49.488  INFO 13916 --- [restartedMain] com.gz.BlogApplication                   : Started BlogApplication in 8.102 seconds (JVM running for 9.305)
+2020-06-25 21:15:59.964  INFO 13916 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-25 21:15:59.965  INFO 13916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-25 21:15:59.983  INFO 13916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-06-25 21:16:00.033  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-06-25 21:16:00.172  WARN 13916 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-06-25 21:16:00.195  WARN 13916 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-06-25 21:16:00.205  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Return:index
+2020-06-25 21:16:00.845  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[41]}
+2020-06-25 21:16:00.845  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[40]}
+2020-06-25 21:16:00.853  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[40, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:16:00.853  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[41, org.apache.catalina.session.StandardSessionFacade@40e0138d]}
+2020-06-25 21:16:00.853  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/39', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[39, org.apache.catalina.session.StandardSessionFacade@3fc5e743]}
+2020-06-25 21:16:00.871  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/39', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[39]}
+2020-06-25 21:16:00.882  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:16:00.882  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:16:00.882  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:16:00.882  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:16:00.882  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:16:00.882  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:16:01.084  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/38', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[38, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:16:01.086  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/38', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[38]}
+2020-06-25 21:16:01.092  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/37', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[37, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:16:01.095  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/37', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[37]}
+2020-06-25 21:16:01.101  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:16:01.102  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:16:01.104  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:16:01.104  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/34', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[34, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:16:01.104  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/34', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[34]}
+2020-06-25 21:16:01.109  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:16:01.114  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:redirect:/img/http://www.ypppt.com/uploads/allimg/180203/1-1P203140435.jpg
+2020-06-25 21:16:01.115  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:16:01.121  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/30', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[30]}
+2020-06-25 21:16:01.121  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/30', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[30, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:16:01.123  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/18', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[18, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:16:01.129  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/18', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[18]}
+2020-06-25 21:16:01.131  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:16:01.131  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:redirect:/img/http://img.08087.cc/uploads/20190415/19/1555326735-hcxlKdXVvn.jpg
+2020-06-25 21:16:01.131  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:16:01.137  WARN 13916 --- [http-nio-8080-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/www.ypppt.com/uploads/allimg/180203/1-1P203140435.jpg]
+2020-06-25 21:16:01.141  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Return:redirect:/img/https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2479375525,3658386141&fm=26&gp=0.jpg
+2020-06-25 21:16:01.148  WARN 13916 --- [http-nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/img.08087.cc/uploads/20190415/19/1555326735-hcxlKdXVvn.jpg]
+2020-06-25 21:16:01.166  WARN 13916 --- [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2479375525,3658386141&fm=26&gp=0.jpg]
+2020-06-25 21:16:57.947  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:16:57.954  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:08.611  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:08.619  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:13.268  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:13.276  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:14.736  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:14.744  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:27.459  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:27.466  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:29.918  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:29.925  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:40.463  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:40.469  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:41.577  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:41.585  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:43.065  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:43.072  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:44.177  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:44.186  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:46.076  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:46.083  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:49.596  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:49.602  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:50.858  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:50.865  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:52.804  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:52.810  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:17:56.815  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:17:56.821  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:18:33.949  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:18:33.959  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:18:36.423  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/blog/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.blog', args=[41, {}]}
+2020-06-25 21:18:36.597  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:blog
+2020-06-25 21:18:36.675  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[41, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:18:36.681  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[41]}
+2020-06-25 21:18:36.690  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:36.693  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:18:37.185  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:18:37.195  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:18:37.345  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/comments/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.CommentController.comments', args=[41, {}]}
+2020-06-25 21:18:37.416  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Return:blog :: commentList
+2020-06-25 21:18:37.443  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/have/42', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.CommentController.getImage', args=[42]}
+2020-06-25 21:18:37.443  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/have/44', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.CommentController.getImage', args=[44]}
+2020-06-25 21:18:37.443  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/have/43', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.CommentController.getImage', args=[43]}
+2020-06-25 21:18:37.461  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:37.462  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:redirect:/img/avatar.png
+2020-06-25 21:18:37.462  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:56.941  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-06-25 21:18:56.971  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Return:index
+2020-06-25 21:18:57.017  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[41, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:18:57.024  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[41]}
+2020-06-25 21:18:57.028  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:57.033  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:18:57.048  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[40, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:18:57.049  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[40]}
+2020-06-25 21:18:57.050  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/39', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[39]}
+2020-06-25 21:18:57.050  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/39', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[39, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:18:57.057  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:18:57.057  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:57.058  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:57.059  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:57.099  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/38', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[38, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:18:57.101  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/38', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[38]}
+2020-06-25 21:18:57.102  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/37', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[37]}
+2020-06-25 21:18:57.102  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/37', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[37, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:18:57.105  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/34', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[34, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:18:57.106  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:57.107  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/34', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[34]}
+2020-06-25 21:18:57.108  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:57.110  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:57.112  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:57.116  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:57.117  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:redirect:/img/http://www.ypppt.com/uploads/allimg/180203/1-1P203140435.jpg
+2020-06-25 21:18:57.200  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/30', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[30, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:18:57.200  WARN 13916 --- [http-nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/www.ypppt.com/uploads/allimg/180203/1-1P203140435.jpg]
+2020-06-25 21:18:57.202  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/30', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[30]}
+2020-06-25 21:18:57.206  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/18', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[18, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:18:57.207  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/18', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[18]}
+2020-06-25 21:18:57.220  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:57.220  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:57.220  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:redirect:/img/http://img.08087.cc/uploads/20190415/19/1555326735-hcxlKdXVvn.jpg
+2020-06-25 21:18:57.224  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Return:redirect:/img/https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2479375525,3658386141&fm=26&gp=0.jpg
+2020-06-25 21:18:57.667  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:18:57.672  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:18:57.675  WARN 13916 --- [http-nio-8080-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/img.08087.cc/uploads/20190415/19/1555326735-hcxlKdXVvn.jpg]
+2020-06-25 21:18:57.678  WARN 13916 --- [http-nio-8080-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2479375525,3658386141&fm=26&gp=0.jpg]
+2020-06-25 21:18:58.915  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/blog/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.blog', args=[41, {}]}
+2020-06-25 21:18:58.926  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Return:blog
+2020-06-25 21:18:58.957  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[41, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:18:58.963  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[41]}
+2020-06-25 21:18:58.964  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:58.968  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:18:59.456  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:18:59.461  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:18:59.606  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/comments/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.CommentController.comments', args=[41, {}]}
+2020-06-25 21:18:59.618  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:blog :: commentList
+2020-06-25 21:18:59.629  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/have/44', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.CommentController.getImage', args=[44]}
+2020-06-25 21:18:59.629  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/have/42', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.CommentController.getImage', args=[42]}
+2020-06-25 21:18:59.629  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/have/43', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.CommentController.getImage', args=[43]}
+2020-06-25 21:18:59.637  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:59.639  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:18:59.641  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:redirect:/img/avatar.png
+2020-06-25 21:19:17.728  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/blog/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.blog', args=[40, {}]}
+2020-06-25 21:19:17.740  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Return:blog
+2020-06-25 21:19:17.770  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[40, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:17.774  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[40]}
+2020-06-25 21:19:17.777  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:17.781  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:19:18.279  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:19:18.284  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:19:18.377  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/comments/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.CommentController.comments', args=[40, {}]}
+2020-06-25 21:19:18.384  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:blog :: commentList
+2020-06-25 21:19:20.155  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/blog/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.blog', args=[40, {}]}
+2020-06-25 21:19:20.166  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:blog
+2020-06-25 21:19:20.204  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[40, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:20.213  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[40]}
+2020-06-25 21:19:20.215  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:20.230  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:19:20.655  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:19:20.665  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:19:20.755  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/comments/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.CommentController.comments', args=[40, {}]}
+2020-06-25 21:19:20.762  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:blog :: commentList
+2020-06-25 21:19:24.388  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2020-06-25 21:19:24.419  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:index
+2020-06-25 21:19:24.457  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[41, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:24.462  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[41]}
+2020-06-25 21:19:24.464  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:24.468  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:19:24.481  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[40, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:24.481  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[40]}
+2020-06-25 21:19:24.481  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/39', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[39, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:24.482  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/39', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[39]}
+2020-06-25 21:19:24.487  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:24.487  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:24.487  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:19:24.491  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:24.501  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/38', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[38, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:24.513  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:24.529  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/38', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[38]}
+2020-06-25 21:19:24.529  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/37', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[37]}
+2020-06-25 21:19:24.529  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/37', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[37, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:24.533  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/34', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[34, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:24.535  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:24.535  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:24.535  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:24.536  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/34', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[34]}
+2020-06-25 21:19:24.546  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:24.548  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:redirect:/img/http://www.ypppt.com/uploads/allimg/180203/1-1P203140435.jpg
+2020-06-25 21:19:24.596  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/30', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[30, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:24.598  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/30', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[30]}
+2020-06-25 21:19:24.603  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/18', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[18, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:24.603  WARN 13916 --- [http-nio-8080-exec-9] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/www.ypppt.com/uploads/allimg/180203/1-1P203140435.jpg]
+2020-06-25 21:19:24.604  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/18', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[18]}
+2020-06-25 21:19:24.635  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:24.637  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Return:redirect:/img/http://img.08087.cc/uploads/20190415/19/1555326735-hcxlKdXVvn.jpg
+2020-06-25 21:19:24.647  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Return:redirect:/img/https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2479375525,3658386141&fm=26&gp=0.jpg
+2020-06-25 21:19:24.647  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:25.157  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:19:25.167  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:19:25.169  WARN 13916 --- [http-nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/img.08087.cc/uploads/20190415/19/1555326735-hcxlKdXVvn.jpg]
+2020-06-25 21:19:25.169  WARN 13916 --- [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2479375525,3658386141&fm=26&gp=0.jpg]
+2020-06-25 21:19:33.583  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-06-25 21:19:33.628  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Return:types
+2020-06-25 21:19:33.758  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[41, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:33.765  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[41]}
+2020-06-25 21:19:33.768  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:33.774  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:19:33.815  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[40, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:33.815  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[40]}
+2020-06-25 21:19:33.817  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/39', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[39, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:33.817  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/39', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[39]}
+2020-06-25 21:19:33.827  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:33.828  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:19:33.830  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:33.830  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:33.842  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/37', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[37, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:33.843  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/37', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[37]}
+2020-06-25 21:19:33.849  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:33.849  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:33.859  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/18', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[18, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:33.859  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/16', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[16, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:33.860  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/18', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[18]}
+2020-06-25 21:19:33.860  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/16', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[16]}
+2020-06-25 21:19:33.866  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:33.866  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:33.866  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:redirect:/img/http://a3.att.hudong.com/35/34/19300001295750130986345801104.jpg
+2020-06-25 21:19:33.866  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:redirect:/img/https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2479375525,3658386141&fm=26&gp=0.jpg
+2020-06-25 21:19:34.262  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:19:34.266  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:19:34.269  WARN 13916 --- [http-nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/a3.att.hudong.com/35/34/19300001295750130986345801104.jpg]
+2020-06-25 21:19:34.270  WARN 13916 --- [http-nio-8080-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2479375525,3658386141&fm=26&gp=0.jpg]
+2020-06-25 21:19:36.531  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/types/14', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 14, {}]}
+2020-06-25 21:19:36.544  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Return:types
+2020-06-25 21:19:36.595  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/38', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[38, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:36.609  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/38', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[38]}
+2020-06-25 21:19:36.611  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:36.624  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/30', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[30]}
+2020-06-25 21:19:36.624  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/30', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[30, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:36.626  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:36.633  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:redirect:/img/http://img.08087.cc/uploads/20190415/19/1555326735-hcxlKdXVvn.jpg
+2020-06-25 21:19:36.633  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:36.662  WARN 13916 --- [http-nio-8080-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/img.08087.cc/uploads/20190415/19/1555326735-hcxlKdXVvn.jpg]
+2020-06-25 21:19:37.015  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:19:37.023  INFO 13916 --- [http-nio-8080-exec-2] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:19:37.892  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/types/15', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.TypeShowController.types', args=[Page request [number: 0, size 8, sort: updateTime: DESC], 15, {}]}
+2020-06-25 21:19:37.909  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Return:types
+2020-06-25 21:19:37.951  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/34', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[34, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:37.961  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/34', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[34]}
+2020-06-25 21:19:37.963  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:37.968  INFO 13916 --- [http-nio-8080-exec-7] com.gz.log.LogAspect                     : Return:redirect:/img/http://www.ypppt.com/uploads/allimg/180203/1-1P203140435.jpg
+2020-06-25 21:19:37.990  WARN 13916 --- [http-nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [http:/www.ypppt.com/uploads/allimg/180203/1-1P203140435.jpg]
+2020-06-25 21:19:38.378  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:19:38.384  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:19:38.744  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.TagShowController.tags', args=[Page request [number: 0, size 8, sort: updateTime: DESC], -1, {}]}
+2020-06-25 21:19:38.779  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:tags
+2020-06-25 21:19:38.841  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[41, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:38.845  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/41', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[41]}
+2020-06-25 21:19:38.848  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:38.850  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:19:38.865  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[40, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:38.866  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/40', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[40]}
+2020-06-25 21:19:38.867  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/39', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[39, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:38.868  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/39', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[39]}
+2020-06-25 21:19:38.877  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:38.877  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Return:redirect:/img/a.jpg
+2020-06-25 21:19:38.878  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:38.878  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:38.906  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/38', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[38]}
+2020-06-25 21:19:38.906  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/38', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[38, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:38.907  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/37', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[37]}
+2020-06-25 21:19:38.907  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/37', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[37, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:38.913  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/fetch/18', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getAvatar', args=[18, org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:38.914  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/get/18', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.getImage', args=[18]}
+2020-06-25 21:19:38.916  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:38.916  INFO 13916 --- [http-nio-8080-exec-4] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:38.916  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:38.916  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:38.928  INFO 13916 --- [http-nio-8080-exec-3] com.gz.log.LogAspect                     : Return:redirect:/img/https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2479375525,3658386141&fm=26&gp=0.jpg
+2020-06-25 21:19:38.928  INFO 13916 --- [http-nio-8080-exec-5] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:39.341  WARN 13916 --- [http-nio-8080-exec-8] o.s.w.s.r.ResourceHttpRequestHandler     : Path represents URL or has "url:" prefix: [https:/ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2479375525,3658386141&fm=26&gp=0.jpg]
+2020-06-25 21:19:39.349  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:19:39.360  INFO 13916 --- [http-nio-8080-exec-1] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:19:40.000  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/archives', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.ArchiveShowController.archives', args=[{}]}
+2020-06-25 21:19:40.026  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:archives
+2020-06-25 21:19:40.471  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:19:40.478  INFO 13916 --- [http-nio-8080-exec-6] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:19:42.723  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/about', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.AboutShowController.about', args=[]}
+2020-06-25 21:19:42.727  INFO 13916 --- [http-nio-8080-exec-10] com.gz.log.LogAspect                     : Return:about
+2020-06-25 21:19:42.855  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/take', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.AboutShowController.getImage', args=[org.apache.catalina.session.StandardSessionFacade@67f748f5]}
+2020-06-25 21:19:42.856  INFO 13916 --- [http-nio-8080-exec-9] com.gz.log.LogAspect                     : Return:redirect:/img/qqq.jpg
+2020-06-25 21:19:43.310  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Request: {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.gz.web.IndexController.newBlogs', args=[{}]}
+2020-06-25 21:19:43.316  INFO 13916 --- [http-nio-8080-exec-8] com.gz.log.LogAspect                     : Return:_fragments.html :: newblogList
+2020-06-25 21:23:08.744  INFO 13916 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-25 21:23:08.746  INFO 13916 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-25 21:23:08.787  INFO 13916 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-25 21:23:08.838  INFO 13916 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
